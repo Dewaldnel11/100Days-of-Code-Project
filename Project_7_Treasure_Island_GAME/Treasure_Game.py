@@ -21,3 +21,9 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ******************************************************************************* ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the Treasure.")
+choice1 = input('You\'re at a crossroad, Where do you want to go ? Type "left" or "right".').lower()
+
+if choice1 == "left":
+    input('You\'ve come to a lake. THere is an island in the middle of the lake. Type "wait" for a boat. Type "swim" to swim across.')
+else:
+    print("You fell into a hole. Game Over.")
