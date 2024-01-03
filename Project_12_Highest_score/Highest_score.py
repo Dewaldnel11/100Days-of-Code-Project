@@ -1,5 +1,5 @@
 print("Hello, After entering your scores, please press ENTER")
-input("please type all your scores here, followed by a space in between each score")
+input("please type all your scores here, followed by a space in between each score:")
 student_scores = input().split()
 for n in range(0, len(student_scores)):
   student_scores[n] = int(student_scores[n])
