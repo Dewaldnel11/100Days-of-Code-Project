@@ -10,9 +10,11 @@ def save():
     passwords = password_entries.get()
 
     with open("data.txt", "a") as data_file:
-        data_file.write(f"{website} | {email} | {passwords}")
+        data_file.write(f"{website} | {email} | {passwords}\n")
+        website_entries.delete(0, END)
+        password_entries.delete(0, END)
 
-        
+
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Password Manager")
