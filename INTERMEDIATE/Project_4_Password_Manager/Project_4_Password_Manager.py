@@ -9,7 +9,10 @@ def save():
     email = email_entries.get()
     passwords = password_entries.get()
 
-    is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered:\nEmail: {email}"
+    if len(website) == 0 or len(passwords) == 0:
+        messagebox.showinfo(title="Oops", message="Please make sure you haven't left any fields empty!")
+    else:
+        is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered:\nEmail: {email}"
                            f"\nPassword: {passwords} \nIs it ok to save?")
 
     if is_ok:
